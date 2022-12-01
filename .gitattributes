@@ -1,0 +1,3 @@
+#*.sh scripts have to be checked out as having unix-style line endings, even on Windows.
+#Otherwise, the *.sh script (startup.sh) can't run properly on Windows host machines.
+*.sh text eol=lf
