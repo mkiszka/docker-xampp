@@ -2,7 +2,7 @@ ARG BASE_DEBIAN=buster
 FROM debian:${BASE_DEBIAN}
 ARG XAMPP_URL
 LABEL maintainer="Tomas Jasek<tomsik68 (at) gmail (dot) com>"
-
+LABEL maintainer="Mateusz Kiszka<mateusz (at) kiszka (dot) name>"
 ENV DEBIAN_FRONTEND noninteractive
 
 # Set root password to root, format is 'user:password'.
@@ -45,8 +45,9 @@ COPY startup.sh /startup.sh
 
 VOLUME [ "/var/log/mysql/", "/var/log/apache2/", "/www", "/opt/lampp/apache2/conf.d/" ]
 
-EXPOSE 3306
+#EXPOSE 3306
 EXPOSE 22
 EXPOSE 80
+EXPOSE 443
 
 CMD ["sh", "/startup.sh"]
